@@ -7,43 +7,28 @@ export const Container = styled.div`
     padding: 1em;
     width: 100%;
 
-    background-color: #fff;
+    background-color: transparent;
+    border-bottom: 1px solid #444;
 
     .logo {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
 
         img {
             width: 100%;
         }
     }
 
-    .user {   
-        display: flex;
-        align-items: center;
+    button {
+        border: none;
+        background-color: transparent;
 
-        span {
-            font-size: 20px;
-            font-weight: 500;
-            margin-right: 1em;
+        #icon {
+            cursor: pointer;
+            margin-top: 0.5em;
+            width: 2em;
 
-            strong {
-                font-size: 26px;
-                color: #2266B3;
-            }
-        }
-
-        button {
-            border: none;
-            background-color: transparent;
-
-            #icon {
-                cursor: pointer;
-                margin-top: 0.5em;
-                width: 2em;
-
-                font-size: 20px;
-            }
+            font-size: 22px;
         }
     }
 `

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container } from './styles';
 import { MdLogout } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
@@ -11,30 +11,15 @@ const Header = () => {
     const { sair } = UseAuth()
     const Navigate = useNavigate()
 
-    const [data, setData] = useState()
-
-    useEffect(() => {
-        const data = JSON.parse(window.localStorage.getItem('users_bd'))
-
-        if (data) {
-            setData(data)
-        }
-    }, [])
-
     return (
         <Container>
             <div className="logo">
                 <img src={logo} alt="logo" />
             </div>
 
-            {data ?
-                <div className="user">
-                    <span>Olá <strong>{data[0].nome}</strong></span>
-                    <button onClick={() => [sair(), Navigate('/')]}>
-                        <MdLogout id='icon' size={26}/>
-                    </button>
-                </div>
-                : null}
+            <button onClick={() => [sair(), Navigate('/')]}>
+                <MdLogout id='icon' size={26} color='#2266b3' />
+            </button>
         </Container>
     )
 }

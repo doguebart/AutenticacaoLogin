@@ -10,10 +10,10 @@ export default createGlobalStyle`
 
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: var(--gray);
+        background-color: var(--back);
     }
 
     :root {
-        --gray: #d1d1d1;
+        --back: #222;
     }
 `
